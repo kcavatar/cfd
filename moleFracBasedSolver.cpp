@@ -144,14 +144,6 @@ void delCalc(double x[], double del[], double Kp[], float P, float Z)
                     {         1.0,         1.0,     1.0,     1.0,     1.0,            1 - x[0] - x[1] - x[2] - x[3] - x[4]}
                    };
 
-//Scaled by 100
-/*double a[N][N+1] = {{   100*Kp[0],         0.0,     0.0, -2*x[3]*P,     0.0,                    x[3]*x[3]*P - x[0]*100*Kp[0]},
-                    {  x[1]*Kp[1],  x[0]*Kp[1], -2*x[2],       0.0,     0.0,                     x[2]*x[2] - x[0]*x[1]*Kp[1]},
-                    {         0.0,   100*Kp[2],     0.0,     0.0, -2*x[4]*P,                    x[4]*x[4]*P - x[1]*100*Kp[2]},
-                    {       2.0*Z,        -2.0,     Z-1,       Z,    -1.0, -2*Z*x[0] + 2*x[1] - (Z-1)*x[2] - Z*x[3] + x[4]},
-                    {         1.0,         1.0,     1.0,     1.0,     1.0,            100 - x[0] - x[1] - x[2] - x[3] - x[4]}
-                   };
-*/
  //GAUSS ELIMINATION Implementation
    int i,j,con;
    float alpha;

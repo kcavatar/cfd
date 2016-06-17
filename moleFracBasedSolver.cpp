@@ -21,7 +21,7 @@ int main()
   cout<<"Input the  values of temperature  (T), pressure (P) and N-O ratio (Z): \n\n";
   float T, P, Z;
   cin>>T>>P>>Z;
- //Count variables
+ //Count variables 
   int i=0, j=0;
  //Calculate equilibrium constants via external functions
   double Kp[3];

@@ -15,7 +15,7 @@ void eigen3(int n);
     /* ------ MAIN FUNCTION ---------*/
 int main()
 {
-	printf("**********   EIGEN-VALUE CALCULATOR  (upto order 3)  ************\n\n");
+	printf("**********   EIGEN-VALUE CALCULATOR  (only order 2)  ************\n\n");
 	//Define variables
 	printf("=> Enter the order of square matrix :\t");
     scanf("%d", &n);

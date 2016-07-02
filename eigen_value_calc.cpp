@@ -15,7 +15,7 @@ void eigen3(int n);
     /* ------ MAIN FUNCTION ---------*/
 int main()
 {
-	printf("**********   EIGEN-VALUE CALCULATOR  (only order 2)  ************\n\n");
+	printf("**********   EIGEN-VALUE CALCULATOR  (upto order 3)  ************\n\n");
 	//Define variables
 	printf("=> Enter the order of square matrix :\t");
     scanf("%d", &n);
@@ -70,12 +70,19 @@ void eigen3(int n)
 		scanf("%f", &x[i][j]);
 	}
 	
+	// lam^3 + a*lam^2 + b*lam + c = 0
+	float a, b, c;
+	a = -(x[0][0] + x[1][1] + x[2][2]);
+	b = (x[1][1]*x[2][2] - x[2][1]*x[1][2]) + x[0][0]*(x[1][1] + x[2][2]) - x[0][1]*x[1][0] - x[2][0]*x[0][2];
+	c = x[0][0]*(x[2][1]*x[1][2] - x[1][1]*x[2][2]) + x[0][1]*(x[1][0]*x[2][2] - x[2][0]*x[1][2]) + x[0][2]*(x[2][0]*x[1][1]- x[1][0]*x[2][1]);
 	printf("\n=> The eigen values of the matrix are :  \n\n");
 	//Case : 1  -> All roots are real and equal
 	if(a*a/9 == b/3)
 	 printf("%.4f\t%.4f\t%.4f", -a/3, -a/3, -a/3);
 	//Case : 2  -> All roots are real and different
-	 
+	
+	//Case : 3  -> One real root and a pair of conjugate complex roots
+	
 	
 }
 
